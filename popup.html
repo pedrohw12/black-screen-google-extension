@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pedro's Safer Mode</title>
+    <style>
+      body {
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pedro's Safer Mode</h1>
+    <button id="onoff" onclick="onoff()">Change to Safer Mode</button>
+
+    <script>
+      // let power = false;
+      function onoff() {
+        currentvalue = document.getElementById("onoff").value;
+        if (currentvalue == "Off") {
+          document.getElementById("onoff").value = "On";
+          let body = document.getElementsByTagName("body")[0];
+          body.style.backgroundColor = "#777";
+          body.style.color = "#fff";
+         let btn = document.getElementById('onoff');
+         btn.innerHTML = 'change to ligth mode';
+         btn.style.color = '#000';
+         btn.style.backgroundColor = '#fff';
+        } else {
+          document.getElementById("onoff").value = "Off";
+          let body = document.getElementsByTagName("body")[0];
+          body.style.backgroundColor = "#fff";
+          body.style.color = "#000";
+          let btn = document.getElementById('onoff');
+         btn.innerHTML = 'change to Safer Mode';
+         btn.style.color = '#000';
+        }
+      }
+    </script>
+  </body>
+</html>
